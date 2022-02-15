@@ -4,7 +4,8 @@ import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Home from "./component/Home";
-import countrytable from "./Countrytable";
+import Countrytable from "./Countrytable";
+import React from "react";
 
 function App() {
   return (

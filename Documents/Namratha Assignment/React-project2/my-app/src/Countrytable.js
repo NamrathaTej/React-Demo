@@ -1,35 +1,26 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
 
-export default function Countrytable() {
+export default function Countrytable({countries}) {
   return (
     <Table striped bordered hover>
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Flag</th>
+          <th>Name</th>
+          <th>Population</th>
+          <th>Language</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td colSpan={2}>Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
+        {countries.map((country) => (
+          <tr>
+            <td>Flag</td>
+            <td>{country.name.commom}</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+        ))}
       </tbody>
     </Table>
   );

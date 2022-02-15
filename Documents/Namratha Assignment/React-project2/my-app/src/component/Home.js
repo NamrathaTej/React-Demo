@@ -1,16 +1,18 @@
+import React from "react";
 import { useState, useEffect } from "react";
-import countrytable from "../Countrytable";
+import Countrytable from "../Countrytable";
+
 
 function Home() {
-  const [country, setCountry] = useState([]);
-  console.log(country);
+  const [countries, setCountries] = useState([]);
+  console.log(countries);
 
   useEffect(() => {
     fetch("https://restcountries.com/v3.1/all")
       .then((response) => response.json())
-      .then((data) => setCountry(data));
+      .then((data) => setCountries(data));
   }, []);
 
-  return (<countrytable country={country} />);
+  return <Countrytable countries={countries} />;
 }
 export default Home;
