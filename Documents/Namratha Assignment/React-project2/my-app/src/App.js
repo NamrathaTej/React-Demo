@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import Home from "./component/Home";
 import Countrytable from "./Countrytable";
 import React from "react";
+import CountryDetails from "./component/Details/CountryDetails";
+import Search from "./component/Search";
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/Details/:name" element={<CountryDetails />} />
         </Routes>
       </BrowserRouter>
     </div>
